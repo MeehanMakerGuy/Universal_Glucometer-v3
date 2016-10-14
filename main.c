@@ -1,4 +1,5 @@
 /**
+ * Project:  Universal Glucometer
   Generated Main Source File
 
   Company:
@@ -42,6 +43,15 @@
     MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE
     TERMS.
 */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <xc.h>         /* XC8 General Include File */
+#include "user.h"
+#include "variables.h"
+#include "nokia.h"
+#include "EEPROM.h"
 
 #include "mcc_generated_files/mcc.h"
 
