@@ -67,16 +67,57 @@ void main(void)
     // Use the following macros to:
 
     // Enable the Global Interrupts
-    //INTERRUPT_GlobalInterruptEnable();
+    INTERRUPT_GlobalInterruptEnable();
 
     // Enable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptEnable();
+    INTERRUPT_PeripheralInterruptEnable();
 
     // Disable the Global Interrupts
     //INTERRUPT_GlobalInterruptDisable();
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
+    
+    LCDInit();
+    LCDClear();
+    gotoXY(0,0);   //upper left corner
+    LCDClear();
+    __delay_ms(250);
+    gotoXY(10,1); //26
+    LCDString("Learn");
+    gotoXY(23,2);  
+    LCDString("By");
+    gotoXY(30,3);  
+    LCDString("Making");
+    Delay_1_Second();
+    LCDClear();
+    LCDWrite(0, 0x20); //We must send 0x20 before modifying the display control mode
+    LCDWrite(0, 0x0D); //Set display control,0x0C normal mode. 0x0D for inverse
+    __delay_ms(500);//Delay_1_Second();
+    gotoXY(12,1 );  
+    LCDString("UNIVERSAL");
+    gotoXY(6,3);  
+    LCDString("GLUCOMETER");
+    __delay_ms(500);
+    LCDClear();    
+    LCDWrite(0, 0x20); //We must send 0x20 before modifying the display control mode
+    LCDWrite(0, 0x0C); //Set display control,0x0C normal mode. 0x0D for inverse
+    __delay_ms(500);
+    gotoXY(20,1);
+    LCDString("Insert");
+    gotoXY(30,2);
+    LCDString("Test");
+    gotoXY(25,3);
+    LCDString("Strip");    
+    __delay_ms(250);
+    LCDClear();
+    gotoXY(0,1);
+    LCDString("Strip Is In");
+    gotoXY(0,2);
+    LCDString("Place Sample");
+    gotoXY(35,3);
+    LCDString("~");
+    __delay_ms(500)   
 
     while (1)
     {

@@ -37,16 +37,16 @@
 //                                 LCD GND              Pin 8 on Nokia 5110
 //                                 LCD Backlight-GND    Pin 7 
 //                                 LCD V+ 3.3           Pin 6
-#define LCD_CLK LATCbits.LATC5  /*Pin 16 on PIC16F1786  Pin 5*/
-#define LCD_DIN LATCbits.LATC4  /*Pin 15                Pin 4*/
-#define LCD_DC  LATCbits.LATC3  /*Pin 14                Pin 3*/
-#define LCD_CE  LATCbits.LATC6  /*Pin 17                Pin 2*/
-#define LCD_RST LATCbits.LATC7  /*Pin 18                Pin 1*/
+#define LCD_CLK LATDbits.LATD5  /*Pin 16 on PIC16F1786  Pin 5*/
+#define LCD_DIN LATDbits.LATD4  /*Pin 15                Pin 4*/
+#define LCD_DC  LATDbits.LATD3  /*Pin 14                Pin 3*/
+#define LCD_CE  LATDbits.LATD6  /*Pin 17                Pin 2*/
+#define LCD_RST LATDbits.LATD7  /*Pin 18                Pin 1*/
 /*The DC pin tells the LCD if we are sending a COMMAND or DATA*/
 #define LCD_COMMAND 0   /*Logic Low sent to DC to indicate sending COMMAND*/
 #define LCD_DATA  1     /*Logic High sent to DC to indicate sending DATA*/
 
-#define _INTOSC 800000 /*Internal Oscillator set to 8MHz*/
+//#define _INTOSC 800000 /*Internal Oscillator set to 8MHz*/
 /*Even though using Internal Oscillator had to set XTAL Frequency*/
 #define _XTAL_FREQ 800000 /* to enable __delay_ms() to work*/
 
@@ -233,11 +233,11 @@ void LCDClear(void) {
 //This sends the magical commands to the PCD8544
 void LCDInit(void) {
   //Configure control pins -setting pins to output
-    TRISCbits.TRISC3=0;
-    TRISCbits.TRISC4=0;
-    TRISCbits.TRISC5=0;
-    TRISCbits.TRISC6=0;
-    TRISCbits.TRISC7=0;
+    TRISDbits.TRISD3=0;
+    TRISDbits.TRISD4=0;
+    TRISDbits.TRISD5=0;
+    TRISDbits.TRISD6=0;
+    TRISDbits.TRISD7=0;
 
     LCD_DIN=0;
     LCD_CLK=0;
@@ -265,8 +265,7 @@ void LCDWrite(char data_or_command, char data) { //refers too LCDWrite(aaa,bbb);
   d=data;
   if(data_or_command==0)LCD_DC=0;   //0 means COMMAND so low sent to DC pin of Nokia
   else LCD_DC=1; //else 1, meaning data, is sent to DC pin of Nokia
-  
-  //Send the data
+    //Send the data
   LCD_CE=0;
 
   for(i=0;i<8;i++)  {
@@ -284,7 +283,7 @@ void NokiaInitApp(void)
     /* TODO Initialize User Ports/Peripherals/Project here */
     /* Setup analog functionality and port direction */
     //ANSELA=0;ANSELB=0;ANSELD=0;ANSELC
-    TRISC=0; //PortC pins outputs - ;TRISA=0;TRISB=0; - PortA and B Outputs
+    TRISD=0; //PortD pins outputs
     /* Initialize peripherals */
     OPTION_REG=0x80; //0b10000000
     /* Enable interrupts */

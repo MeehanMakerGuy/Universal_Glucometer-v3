@@ -4,6 +4,20 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="MCC Generated Files"
+                     displayName="MCC Generated Files"
+                     projectFiles="true">
+        <itemPath>mcc_generated_files/interrupt_manager.h</itemPath>
+        <itemPath>mcc_generated_files/mcc.h</itemPath>
+        <itemPath>mcc_generated_files/opa1.h</itemPath>
+        <itemPath>mcc_generated_files/pin_manager.h</itemPath>
+        <itemPath>mcc_generated_files/clkref.h</itemPath>
+        <itemPath>mcc_generated_files/adc.h</itemPath>
+        <itemPath>mcc_generated_files/eusart.h</itemPath>
+        <itemPath>mcc_generated_files/fvr.h</itemPath>
+        <itemPath>mcc_generated_files/dac1.h</itemPath>
+        <itemPath>mcc_generated_files/memory.h</itemPath>
+      </logicalFolder>
       <itemPath>eeprom.h</itemPath>
       <itemPath>local_stdint.h</itemPath>
       <itemPath>nokia.h</itemPath>
@@ -17,6 +31,24 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="MCC Generated Files"
+                     displayName="MCC Generated Files"
+                     projectFiles="true">
+        <itemPath>mcc_generated_files/memory.c</itemPath>
+        <itemPath>mcc_generated_files/eusart.c</itemPath>
+        <itemPath>mcc_generated_files/pin_manager.c</itemPath>
+        <itemPath>mcc_generated_files/clkref.c</itemPath>
+        <itemPath>mcc_generated_files/adc.c</itemPath>
+        <itemPath>mcc_generated_files/fvr.c</itemPath>
+        <itemPath>mcc_generated_files/dac1.c</itemPath>
+        <itemPath>mcc_generated_files/opa1.c</itemPath>
+        <itemPath>mcc_generated_files/interrupt_manager.c</itemPath>
+        <itemPath>mcc_generated_files/mcc.c</itemPath>
+      </logicalFolder>
+      <itemPath>main.c</itemPath>
+      <itemPath>Nokia.c</itemPath>
+      <itemPath>user.c</itemPath>
+      <itemPath>variables.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

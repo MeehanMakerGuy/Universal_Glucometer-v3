@@ -5,7 +5,7 @@
 *********************************************************************
 * FileName:         user.h
 * Dependencies:     See INCLUDES section below
-* Processor:        PIC16LF1786
+* Processor:        PIC16LF1789
 * Compiler:         XC8
 * Company:          Microchip Technology, Inc.
 *
