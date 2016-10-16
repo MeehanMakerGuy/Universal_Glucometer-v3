@@ -83,7 +83,7 @@
  * @Example
     INTERRUPT_PeripheralInterruptEnable();
  */
-#define INTERRUPT_PeripheralInterruptEnable() (INTCONbits.PEIE = 1)
+//#define INTERRUPT_PeripheralInterruptEnable() (INTCONbits.PEIE = 1)
 
 /**
  * @Param
@@ -95,7 +95,7 @@
  * @Example
     INTERRUPT_PeripheralInterruptDisable();
  */
-#define INTERRUPT_PeripheralInterruptDisable() (INTCONbits.PEIE = 0)
+//#define INTERRUPT_PeripheralInterruptDisable() (INTCONbits.PEIE = 0)
 
 /**
  * @Param

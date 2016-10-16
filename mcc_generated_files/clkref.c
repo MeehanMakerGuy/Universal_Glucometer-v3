@@ -59,6 +59,6 @@ void CLKREF_Initialize(void)
     // CLKRSLR enabled; CLKROE disabled; CLKRDC 50% Duty Cycle; CLKRDIV BaseClock; CLKREN enabled; 
     CLKRCON = 0xB0;
 }
-/**
+/*
  End of File
 */

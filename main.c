@@ -70,7 +70,7 @@ void main(void)
     INTERRUPT_GlobalInterruptEnable();
 
     // Enable the Peripheral Interrupts
-    INTERRUPT_PeripheralInterruptEnable();
+    //INTERRUPT_PeripheralInterruptEnable();
 
     // Disable the Global Interrupts
     //INTERRUPT_GlobalInterruptDisable();
@@ -117,7 +117,7 @@ void main(void)
     LCDString("Place Sample");
     gotoXY(35,3);
     LCDString("~");
-    __delay_ms(500)   
+    __delay_ms(500);   
 
     while (1)
     {
